@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Province.destroy_all
 
+tagArray = ["paid", "processing", "fulfilled", "delivered", "canceled"]
+
 provincesArray = [
                     ["Alberta","AB",0,5,0,"Canada"],
                     ["British Columbia","BC",7,5,0,"Canada"],
@@ -32,4 +34,9 @@ provincesArray.each do |prov|
                             :HST => prov[4],
                             :country => prov[5])
     newProv.save!
+    end
+
+    tagArray.each do |tag|
+        newTag = Tag.new(:name => tag)
+        newTag.save!
     end
