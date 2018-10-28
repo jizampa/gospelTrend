@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Province.destroy_all
+Tag.destroy_all
 
 tagArray = ["paid", "processing", "fulfilled", "delivered", "canceled"]
 
